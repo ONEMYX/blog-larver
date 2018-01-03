@@ -11,6 +11,30 @@
 |
 */
 
+
+
+// 用户模板
+//注册页面
+Route::get('/register','\App\Http\Controllers\RegisterController@index');
+//注册行为
+Route::post('/register','\App\Http\Controllers\RegisterController@register');
+//登陆页面
+Route::get('/login','\App\Http\Controllers\LoginController@index');
+//登出行为
+Route::post('/login','\App\Http\Controllers\LoginController@login');
+//登出行为
+Route::get('/logout','\App\Http\Controllers\LoginController@logout');
+//个人设置页面
+Route::get('/user/me/setting','\App\Http\Controllers\UserController@setting');
+//个人设置页面
+Route::post('/user/me/setting','\App\Http\Controllers\UserController@settingStore');
+
+
+
+
+
+
+
 //文章列表页面
 //Route::get('/', '\App\Http\Controllers\PostController@index');
 Route::get('/posts', '\App\Http\Controllers\PostController@index');
