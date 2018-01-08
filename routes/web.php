@@ -52,4 +52,10 @@ Route::get('/posts/{post}/delete','\App\Http\Controllers\PostController@delete')
 Route::post('/posts/img/upload','\App\Http\Controllers\PostController@imageUpload');
 //提交评论
 Route::post('/posts/{post}/comment','\App\Http\Controllers\PostController@comment');
+//点赞
+Route::get('/posts/{post}/zan','\App\Http\Controllers\PostController@zan');
+//取消赞
+Route::get('/posts/{post}/unzan','\App\Http\Controllers\PostController@unzan');
+
+
 
