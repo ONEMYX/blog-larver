@@ -41,6 +41,8 @@ Route::get('/posts', '\App\Http\Controllers\PostController@index');
 //创建文章
 Route::get('/posts/create', '\App\Http\Controllers\PostController@create');
 Route::post('/posts','\App\Http\Controllers\PostController@store');
+//搜索
+Route::get('/posts/search','\App\Http\Controllers\PostController@search');
 //文章详情页面
 Route::get('/posts/{post}','\App\Http\Controllers\PostController@show');
 //编辑文章
@@ -56,6 +58,8 @@ Route::post('/posts/{post}/comment','\App\Http\Controllers\PostController@commen
 Route::get('/posts/{post}/zan','\App\Http\Controllers\PostController@zan');
 //取消赞
 Route::get('/posts/{post}/unzan','\App\Http\Controllers\PostController@unzan');
+
+
 
 
 
