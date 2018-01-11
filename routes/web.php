@@ -60,6 +60,13 @@ Route::get('/posts/{post}/zan','\App\Http\Controllers\PostController@zan');
 Route::get('/posts/{post}/unzan','\App\Http\Controllers\PostController@unzan');
 
 
+//个人中心页面
+Route::get('/user/{user}','\App\Http\Controllers\UserController@show');
+Route::post('/user/{user}/fan','\App\Http\Controllers\UserController@fan');
+Route::post('/user/{user}/unfan','\App\Http\Controllers\UserController@unfan');
+
+
+
 
 
 
