@@ -16,6 +16,13 @@ class AppServiceProvider extends ServiceProvider
     {
         //定义数据库String 的默认长度
         Schema::defaultStringLength(250);
+
+        \View::composer('layout.sidebar',function ($view)
+        {
+            $topics = \App\Topic::all();
+
+            $view->with('topics',$topics);
+        });
     }
 
     /**
