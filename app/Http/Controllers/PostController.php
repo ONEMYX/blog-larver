@@ -12,7 +12,8 @@ class PostController extends Controller
     //文章列表页面
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'desc')->withCount(['comments','zans'])->paginate(6);
+        $posts = Post::orderBy('created_at', 'desc')->withCount(['comments','zans'])->with('user')->paginate(6);
+
         return view('post/index', compact('posts'));
     }
 
